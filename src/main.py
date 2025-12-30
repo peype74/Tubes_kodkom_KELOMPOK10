@@ -1,10 +1,16 @@
 from huffman import huffman_compress
+from lzw import lzw_compress
+from metrics import entropy
 
-# contoh teks uji
-text = "ini adalah contoh teks untuk kompresi huffman"
+text = "ini adalah contoh teks untuk kompresi data"
 
-encoded, codes = huffman_compress(text)
+print("Entropy sumber:", entropy(text))
 
-print("Teks asli       :", text)
-print("Teks terkompres :", encoded)
-print("Kode Huffman    :", codes)
+encoded_huff, _ = huffman_compress(text)
+encoded_lzw = lzw_compress(text)
+
+print("\n=== HUFFMAN ===")
+print("Hasil encoding:", encoded_huff)
+
+print("\n=== LZW ===")
+print("Hasil encoding:", encoded_lzw)
