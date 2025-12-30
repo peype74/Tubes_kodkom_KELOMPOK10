@@ -3,7 +3,7 @@ from lzw import lzw_compress
 from metrics import entropy
 from dct_text import dct_text_compress
 
-text = "ini adalah contoh teks untuk kompresi data"
+text = "contoh teks untuk kompresi data"
 
 print("Entropy sumber:", entropy(text))
 
@@ -21,3 +21,8 @@ print(encoded_lzw)
 dct_result = dct_text_compress(text)
 print("\n=== DCT ===")
 print(dct_result)
+
+# ===== TOPIK 2 : IMAGE COMPRESSION =====
+# from image_compress import compress_image, psnr
+# img_original, img_compressed = compress_image("data/sample.jpg")
+# print("PSNR Image:", psnr(img_original, img_compressed))
