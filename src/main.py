@@ -22,6 +22,12 @@ dct_result = dct_text_compress(text)
 print("\n=== DCT ===")
 print(dct_result)
 
+# ===== TOPIK 3 : VIDEO COMPRESSION =====
+# from video_compress import compress_video, calculate_bitrate
+# compress_video("data/input.avi", "data/output.avi")
+# print("Video bitrate:", calculate_bitrate("data/output.avi"))
+
+
 # ===== TOPIK 2 : IMAGE COMPRESSION =====
 # from image_compress import compress_image, psnr
 # img_original, img_compressed = compress_image("data/sample.jpg")
